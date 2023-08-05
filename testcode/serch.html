@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Search Bar with Bootstrap</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="searchInput" class="sr-only">Search</label>
+      <input type="text" class="form-control mr-2" id="searchInput" placeholder="Search...">
+    </div>
+    <button type="submit" class="btn btn-primary mr-2">Search</button>
+    <button type="button" class="btn btn-secondary" id="cancelButton">Cancel</button>
+  </form>
+</div>
+
+<!-- Add Bootstrap JS and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Add click event listener to the cancel button
+    $('#cancelButton').click(function() {
+      // Clear the search input text
+      $('#searchInput').val('');
+    });
+  });
+</script>
+
+</body>
+</html>
